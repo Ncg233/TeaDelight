@@ -11,13 +11,12 @@ public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
         super(output);
     }
-
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-
     }
     @Override
     public void generateItemModels(ItemModelGenerator generator) {
         generator.register(TDItems.GREEN_TEA, Models.GENERATED);
+        generator.register(TDItems.DRIED_GREEN_TEA, Models.GENERATED);
     }
 }

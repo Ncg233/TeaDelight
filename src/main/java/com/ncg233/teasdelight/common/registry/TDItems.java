@@ -13,6 +13,7 @@ import java.util.LinkedHashSet;
 public class TDItems {
     public static final LinkedHashSet<Item> ITEMS = Sets.newLinkedHashSet();
     public static final Item GREEN_TEA = registerItem("green_tea", new Item(new FabricItemSettings()));
+    public static final Item DRIED_GREEN_TEA = registerItem("dried_green_tea", new Item(new FabricItemSettings()));
     private static Item registerItem(String name, Item item) {
         Item register = Registry.register(Registries.ITEM, new Identifier(TeaDelight.MODID, name), item);
         ITEMS.add(register);
