@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "teasdelight",
+	"version": "${version}",
+	"name": "Tea's Delight",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/modid/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.ncg233.teasdelight.TeaDelight"
+		],
+		"client": [
+			"com.ncg233.teasdelight.client.TeaDelightClient"
+		],
+		"fabric-datagen": [
+			"com.ncg233.teasdelight.datagen.DataGenerator"
+		]
+	},
+	"mixins": [
+		"teasdelight.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.21",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
