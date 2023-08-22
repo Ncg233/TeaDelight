@@ -16,9 +16,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     }
 
-    @Override
-    protected Iterable<Block> getKnownBlocks() {
-
-
-    }
+//    @Override
+//    protected Iterable<Block> getKnownBlocks() {
+//        return
+//    }
 }

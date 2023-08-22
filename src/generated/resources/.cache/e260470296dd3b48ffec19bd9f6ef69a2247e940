@@ -1,6 +1,9 @@
-// 1.20.1	2023-08-21T11:22:22.6222063	Block States: teasdelight
+// 1.20.1	2023-08-22T20:59:46.9047872	Block States: teasdelight
 e1f8477615592b3c7b13dca86ec253d8fe8de920 assets/teasdelight/blockstates/carnelian_log.json
 b6c9e8e143d64f07d6b498e3c6e51403ea0f031c assets/teasdelight/blockstates/green_tea_leaves.json
 3215d8d1ac02491be8f273dd9f57bf5fd262e3e5 assets/teasdelight/models/block/carnelian_log.json
 161a8f4888dc161d77acc7cc88bd317f2b8a09fb assets/teasdelight/models/block/carnelian_log_horizontal.json
 dd1cb3fb2506a52beb58cc7c0012496e58ef84e5 assets/teasdelight/models/block/green_tea_leaves.json
+1112e0d1867dd2a0278ab7080b1cb4c32a86ec1f assets/teasdelight/models/item/carnelian_log.json
+05b5bade905ef2eae632c6060a30a16f56543d12 assets/teasdelight/models/item/dry_rack.json
+3824607ebdfca9549d7431644ed478db01193a59 assets/teasdelight/models/item/green_tea_leaves.json

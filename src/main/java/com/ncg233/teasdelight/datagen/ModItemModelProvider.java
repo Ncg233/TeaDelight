@@ -18,11 +18,6 @@ public class ModItemModelProvider extends ItemModelProvider {
     }
     @Override
     protected void registerModels() {
-        //blockItem
-        blockItem(TDItems.GREEN_TEA_LEAVES.getId());
-        blockItem(TDItems.DRY_RACK.getId());
-        blockItem(TDItems.CARNELIAN_LOG.getId());
-
         simpleItem(TDItems.GREEN_TEA);
         simpleItem(TDItems.DRIED_GREEN_TEA);
     }
@@ -30,9 +25,5 @@ public class ModItemModelProvider extends ItemModelProvider {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation(GENERATED)).texture("layer0",
                 new ResourceLocation(TeaDelight.MODID,"item/" + item.getId().getPath()));
-    }
-    public ItemModelBuilder blockItem(ResourceLocation item) {
-        ResourceLocation resourceLocation = new ResourceLocation(TeaDelight.MODID, "block/" + item.getPath());
-        return this.getBuilder(item.toString()).parent(new ModelFile.UncheckedModelFile(resourceLocation));
     }
 }
