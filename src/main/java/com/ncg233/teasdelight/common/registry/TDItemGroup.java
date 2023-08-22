@@ -9,9 +9,11 @@ import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
+import static com.ncg233.teasdelight.TeaDelight.createIdentifier;
+
 public class TDItemGroup {
     public static final ItemGroup TEA_DELIGHT = Registry.register(Registries.ITEM_GROUP,
-            new Identifier(TeaDelight.MODID,"tea_delight"),
+            createIdentifier("tea_delight"),
             FabricItemGroup.builder().displayName(Text.translatable("itemGroup.teasdelight"))
                     .icon(() -> new ItemStack(TDItems.GREEN_TEA))
                     .entries(TDItemGroup::buildDisplayItems).build());
