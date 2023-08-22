@@ -1,0 +1,37 @@
+modLoader="javafml"
+loaderVersion="[41,)"
+license="MIT License"
+
+[[mods]]
+modId="teasdelight"
+version="1.20.1-2.0"
+displayName="Tea's Delight"
+# updateJSONURL=""
+logoFile="logo.png"
+logoBlur=false
+credits="Umpaz, Probleyes, SoyTutta, j-cob44"
+authors="Ncg233"
+description="An addon for the Farmer's Delight mod centered around brewing tea and coffee in the kettle"
+itemIcon="farmersrespite:kettle"
+configBackground="minecraft:textures/block/bricks.png"
+
+[[dependencies.teasdelight]]
+    modId="forge"
+    mandatory=true
+    versionRange="[47.1.0,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.teasdelight]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20,1.21)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.teasdelight]]
+modId="farmersdelight"
+mandatory=true
+versionRange="[1.20,1.21)"
+ordering="NONE"
+side="BOTH"

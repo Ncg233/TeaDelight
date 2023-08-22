@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "teasdelight:block/carnelian_log_top",
+    "side": "teasdelight:block/carnelian_log"
+  }
+}

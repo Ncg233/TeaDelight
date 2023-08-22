@@ -1,0 +1,16 @@
+{
+  "block.dry_rack.illegal_item": "这东西个可不能放进去！",
+  "block.dry_rack.invalid_item": "做这件事的意义在哪？",
+
+  "block.teasdelight.carnelian_log": "茶树树干",
+  "block.teasdelight.dry_rack": "晾干架",
+  "block.teasdelight.green_tea_leaves": "绿茶叶",
+
+  "item.teasdelight.green_tea" : "绿茶叶",
+  "item.teasdelight.dried_green_tea" : "干燥的绿茶叶",
+
+  "itemGroup.teasdelight" : "茶叶乐事",
+
+  "teasdelight.jei.drying": "晾干"
+
+}

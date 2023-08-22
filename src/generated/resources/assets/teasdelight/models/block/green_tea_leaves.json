@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "teasdelight:block/green_tea_leaves"
+  }
+}

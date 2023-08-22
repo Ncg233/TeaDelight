@@ -1,0 +1,12 @@
+{
+  "type": "teasdelight:drying",
+  "drying_time": 200,
+  "ingredients": [
+    {
+      "item": "teasdelight:green_tea"
+    }
+  ],
+  "output": {
+    "item": "teasdelight:dried_green_tea"
+  }
+}

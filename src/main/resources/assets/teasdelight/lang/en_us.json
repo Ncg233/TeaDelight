@@ -1,0 +1,15 @@
+{
+  "block.dry_rack.illegal_item": "This thing can't be put in",
+  "block.dry_rack.invalid_item": "What are you going to do?",
+
+  "block.teasdelight.carnelian_log": "Carnelian Log",
+  "block.teasdelight.dry_rack": "Dry Rack",
+  "block.teasdelight.green_tea_leaves": "Green Tea Leaves",
+
+  "item.teasdelight.green_tea" : "Green Tea",
+  "item.teasdelight.dried_green_tea" : "Dried Green Tea",
+
+  "itemGroup.teasdelight" : "Tea's Delight",
+
+  "teasdelight.jei.drying": "Drying"
+}
