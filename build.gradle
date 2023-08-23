@@ -12,7 +12,6 @@ base {
 
 loom {
     splitEnvironmentSourceSets()
-
 	mods {
 		"teasdelight" {
 			sourceSet sourceSets.main

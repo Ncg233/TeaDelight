@@ -6,7 +6,6 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.util.Identifier;
 
 import java.util.LinkedHashSet;
 
@@ -22,7 +21,7 @@ public class TDItems {
         return register;
     }
     //load this class
-    public static void registerModItems(){
+    public static void registerItems(){
         TeaDelight.LOGGER.info("Registering items for" + TeaDelight.MODID);
     }
 }

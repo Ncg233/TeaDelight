@@ -10,7 +10,6 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.util.Identifier;
 
 import static com.ncg233.teasdelight.TeaDelight.createIdentifier;
 
@@ -25,7 +24,7 @@ public class TDBlocks {
     private static Item registerBlockItem(String name, Block block){
         return TDItems.registerItem(name,new BlockItem(block, new FabricItemSettings()));
     }
-    public static void registerTDBlocks() {
+    public static void registerBlocks() {
         TeaDelight.LOGGER.info("registering blocks for" + TeaDelight.MODID);
     }
 }
