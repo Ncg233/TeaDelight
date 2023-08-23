@@ -87,8 +87,6 @@ public class DryRackBlock extends BaseEntityBlock implements SimpleWaterloggedBl
     private void sendMessage(Player player,String message){
         player.displayClientMessage(Component.translatable(message),true);
     }
-
-
     @Override
     public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
         if (state.getBlock() != newState.getBlock()) {
@@ -111,7 +109,6 @@ public class DryRackBlock extends BaseEntityBlock implements SimpleWaterloggedBl
     public FluidState getFluidState(BlockState state) {
         return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }
-
     @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {

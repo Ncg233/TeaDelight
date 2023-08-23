@@ -21,7 +21,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        //simpleItem
+        //simpleBlock
         logBlock(TDBlocks.CARNELIAN_LOG);
         leavesBlock(TDBlocks.GREEN_TEA_LEAVES,new ResourceLocation(TeaDelight.MODID, "block/green_tea_leaves"));
         //blockItem
