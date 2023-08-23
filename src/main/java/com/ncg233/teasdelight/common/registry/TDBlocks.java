@@ -1,6 +1,7 @@
 package com.ncg233.teasdelight.common.registry;
 
 import com.ncg233.teasdelight.TeaDelight;
+import com.ncg233.teasdelight.common.block.DryRackBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
@@ -15,7 +16,7 @@ import static com.ncg233.teasdelight.TeaDelight.createIdentifier;
 
 public class TDBlocks {
     public static final Block DRY_RACK = registerBlock("dry_rack",
-            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+            new DryRackBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).nonOpaque()));
     private static Block registerBlock(String name, Block block){
         Item item = registerBlockItem(name, block);
         TDItems.ITEMS.add(item);
