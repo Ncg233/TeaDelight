@@ -2,7 +2,6 @@ package com.ncg233.teasdelight.common.block;
 
 import com.ncg233.teasdelight.common.block.entity.DryRackBlockEntity;
 import com.ncg233.teasdelight.common.registry.TDBlockEntityTypes;
-import com.nhoryzon.mc.farmersdelight.block.StoveBlock;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -12,7 +11,7 @@ import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
-import net.minecraft.state.property.EnumProperty;
+import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.BlockMirror;
@@ -28,10 +27,8 @@ import net.minecraft.world.WorldAccess;
 import net.minecraft.world.tick.OrderedTick;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.Optional;
-
 public class DryRackBlock extends BlockWithEntity implements Waterloggable {
-    private static final EnumProperty FACING = Properties.HORIZONTAL_FACING;
+    public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
     private static final VoxelShape SHAPE = Block.createCuboidShape(0,0,0,16,10,16);
     public DryRackBlock(Settings settings) {

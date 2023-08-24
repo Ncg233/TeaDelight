@@ -6,8 +6,13 @@ import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.inventory.Inventories;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.network.listener.ClientPlayPacketListener;
+import net.minecraft.network.packet.Packet;
+import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Vec2f;
+import org.jetbrains.annotations.Nullable;
 
 public class DryRackBlockEntity extends BlockEntity {
     protected final DefaultedList<ItemStack> inventory;
@@ -20,6 +25,7 @@ public class DryRackBlockEntity extends BlockEntity {
         dryingTotalTimes = new int[4];
         dryingTimes = new int[4];
     }
+    @Override
     public void readNbt(NbtCompound tag) {
         super.readNbt(tag);
         this.inventory.clear();
@@ -35,6 +41,7 @@ public class DryRackBlockEntity extends BlockEntity {
             System.arraycopy(dryingTotalTimeRead, 0, this.dryingTotalTimes, 0, Math.min(this.dryingTotalTimes.length, dryingTotalTimeRead.length));
         }
     }
+    @Override
     public void writeNbt(NbtCompound tag) {
         super.writeNbt(tag);
         Inventories.writeNbt(tag, this.inventory, true);
@@ -46,7 +53,14 @@ public class DryRackBlockEntity extends BlockEntity {
         if (this.world != null) {
             this.world.updateListeners(this.getPos(), this.getCachedState(), this.getCachedState(), 3);
         }
-
+    }
+    public Vec2f getStoveItemOffset(int index) {
+        float X_OFFSET = 0.2F;
+        float Y_OFFSET = 0.2F;
+        Vec2f[] OFFSETS = new Vec2f[]{
+                new Vec2f(X_OFFSET, Y_OFFSET), new Vec2f(-X_OFFSET, Y_OFFSET),
+                new Vec2f(X_OFFSET, -Y_OFFSET), new Vec2f(-X_OFFSET, -Y_OFFSET)};
+        return OFFSETS[index];
     }
     public boolean addItem(ItemStack itemStack, int cookTime) {
         for(int i = 0; i < this.inventory.size(); ++i) {
@@ -62,6 +76,18 @@ public class DryRackBlockEntity extends BlockEntity {
 
         return false;
     }
+    @Override
+    public @Nullable Packet<ClientPlayPacketListener> toUpdatePacket() {
+        return BlockEntityUpdateS2CPacket.create(this);
+    }
+    @Override
+    public NbtCompound toInitialChunkDataNbt() {
+        NbtCompound nbtCompound = new NbtCompound();
+        Inventories.writeNbt(nbtCompound, this.inventory, true);
+        return nbtCompound;
+    }
 
-
+    public DefaultedList<ItemStack> getInventory() {
+        return inventory;
+    }
 }
